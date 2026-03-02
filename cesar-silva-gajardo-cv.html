@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>César Silva Gajardo - CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.6;
+      color: #2d2d2d;
+      background: #f5f5f5;
+      padding: 30px 15px;
+    }
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: white;
+      padding: 45px 55px;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+      border: 1px solid #e0e0e0;
+    }
+    
+    /* HEADER CON FOTO */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 25px;
+    }
+    .header-left {
+      flex: 1;
+    }
+    .photo {
+      width: 3.8cm;
+      height: 3.8cm;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 2px solid #333;
+      margin-left: 25px;
+      flex-shrink: 0;
+    }
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16pt;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 5px;
+      letter-spacing: 0.5px;
+    }
+    h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 11pt;
+      color: #4a4a4a;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .contact {
+      font-size: 10pt;
+      color: #555;
+      margin-top: 10px;
+      line-height: 1.8;
+    }
+    .contact a {
+      color: #2d2d2d;
+      text-decoration: none;
+      border-bottom: 1px solid #ccc;
+    }
+    .contact a:hover {
+      border-bottom: 1px solid #000;
+    }
+    
+    .keywords {
+      background: #f8f8f8;
+      border-left: 4px solid #333;
+      padding: 15px 20px;
+      margin: 25px 0;
+    }
+    .keywords h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11pt;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+    }
+    .keywords-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .keyword-item {
+      background: white;
+      border: 1px solid #ddd;
+      padding: 5px 12px;
+      border-radius: 3px;
+      font-size: 9.5pt;
+      color: #333;
+    }
+    
+    .section {
+      margin-top: 25px;
+    }
+    .section h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12pt;
+      font-weight: 600;
+      color: #1a1a1a;
+      border-bottom: 2px solid #333;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+    p {
+      text-align: justify;
+      margin-bottom: 10px;
+    }
+    ul {
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    .job {
+      margin-bottom: 20px;
+    }
+    .job h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11pt;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 3px;
+    }
+    .job span {
+      font-size: 10pt;
+      color: #666;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .achievements {
+      background: #f8f8f8;
+      padding: 12px 15px;
+      border-radius: 3px;
+      margin-top: 10px;
+      border-left: 3px solid #555;
+    }
+    .achievements strong {
+      color: #1a1a1a;
+    }
+    
+    .soft-skills {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px;
+      margin-top: 10px;
+    }
+    .soft-skill {
+      background: #f8f8f8;
+      padding: 5px 10px;
+      border-left: 3px solid #333;
+      font-size: 9.5pt;
+    }
+    
+    .languages {
+      display: flex;
+      gap: 30px;
+      margin-top: 10px;
+    }
+    .language {
+      flex: 1;
+    }
+    .language strong {
+      display: block;
+      font-size: 10.5pt;
+      color: #1a1a1a;
+      margin-bottom: 3px;
+    }
+    .language span {
+      color: #666;
+      font-size: 10pt;
+    }
+    .level-bar {
+      height: 6px;
+      background: #e0e0e0;
+      border-radius: 3px;
+      margin-top: 5px;
+      overflow: hidden;
+    }
+    .level-fill {
+      height: 100%;
+      background: #333;
+    }
+    
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .skill {
+      background: #2d2d2d;
+      color: white;
+      padding: 6px 14px;
+      border-radius: 3px;
+      font-size: 9.5pt;
+    }
+    
+    .portfolio-link {
+      background: #f8f8f8;
+      border: 2px solid #333;
+      padding: 15px 20px;
+      margin-top: 10px;
+      text-align: center;
+      border-radius: 3px;
+    }
+    .portfolio-link a {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11pt;
+      font-weight: 600;
+      color: #1a1a1a;
+      text-decoration: none;
+      border-bottom: 2px solid #333;
+      padding-bottom: 2px;
+    }
+    .portfolio-link p {
+      margin-top: 8px;
+      font-size: 9.5pt;
+      color: #666;
+      text-align: center;
+    }
+    
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+      .container {
+        box-shadow: none;
+        padding: 30px;
+        border: none;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+      }
+      .photo {
+        margin: 15px auto 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <div class="header-left">
+        <h1>CÉSAR SILVA GAJARDO</h1>
+        <h2>Soporte Técnico IT | Help Desk | Telecomunicaciones</h2>
+        
+        <div class="contact">
+          📍 Córdoba, Argentina<br>
+          📞 +54 351 218 7054<br>
+          📧 <a href="mailto:casg.cba@gmail.com">casg.cba@gmail.com</a><br>
+          🔗 <a href="https://linkedin.com/in/casg" target="_blank">linkedin.com/in/casg</a><br>
+          🌐 <a href="https://casg.netlify.app" target="_blank">casg.netlify.app</a>
+        </div>
+      </div>
+      
+      <div class="photo">
+        <!-- REEMPLAZÁ ESTA LÍNEA con el enlace de tu foto -->
+        <img src="cesar-silva-gajardo.png" alt="César Silva Gajardo">
+      </div>
+    </header>
+
+    <div class="keywords">
+      <h3>COMPETENCIAS CLAVE</h3>
+      <div class="keywords-list">
+        <span class="keyword-item">Soporte Técnico IT</span>
+        <span class="keyword-item">Help Desk L1/L2</span>
+        <span class="keyword-item">Troubleshooting</span>
+        <span class="keyword-item">ITIL</span>
+        <span class="keyword-item">Gestión de Tickets</span>
+        <span class="keyword-item">SLA Management</span>
+        <span class="keyword-item">Networking</span>
+        <span class="keyword-item">MPLS</span>
+        <span class="keyword-item">TCP/IP</span>
+        <span class="keyword-item">DNS/DHCP</span>
+        <span class="keyword-item">VLAN</span>
+        <span class="keyword-item">Fibra Óptica</span>
+        <span class="keyword-item">Cloud Services</span>
+        <span class="keyword-item">Atención al Cliente</span>
+        <span class="keyword-item">Resolución de Incidencias</span>
+        <span class="keyword-item">Capacitación Técnica</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>PERFIL PROFESIONAL</h3>
+      <p>Especialista en Soporte Técnico IT y Telecomunicaciones, con más de 10 años de experiencia en atención a usuarios, resolución de incidencias, monitoreo de redes y soporte corporativo. Sólidos conocimientos en networking capa 2 y 3, enlaces MPLS, servicios cloud (DNS, email, hosting) y troubleshooting avanzado. Experiencia en gestión de tickets bajo metodología ITIL, cumplimiento de SLA y mejora continua de procesos. Perfil orientado a la resolución eficiente de problemas, calidad de servicio, trabajo en equipo y adaptabilidad a nuevas tecnologías.</p>
+    </div>
+
+    <div class="section">
+      <h3>EXPERIENCIA PROFESIONAL</h3>
+
+      <div class="job">
+        <h4>APEX AMÉRICA BPO – Telecom</h4>
+        <span><strong>Representante de Atención al Cliente 2017-2025 / Supervisor Jul-Dic. 2025</strong> · Córdoba, Argentina</span>
+        <ul>
+          <li>Soporte técnico postventa para clientes corporativos de gran escala.</li>
+          <li>Diagnóstico y resolución de incidencias en redes Coaxial, ADSL y Fibra Óptica.</li>
+          <li>Monitoreo de enlaces MPLS y L2.</li>
+          <li>Gestión integral de incidentes de networking capa 2 y 3.</li>
+          <li>Soporte a servicios cloud: DNS, email corporativo y hosting.</li>
+          <li>Seguimiento de tickets bajo metodología ITIL, cumplimiento de SLA y métricas de desempeño.</li>
+          <li>Capacitación técnica, mentoría y soporte operativo a nuevos agentes.</li>
+        </ul>
+        <div class="achievements">
+          <strong>Logros destacados:</strong> Mejora sostenida en métricas de resolución y satisfacción del cliente • Reducción de tiempos promedio de atención • Reconocimiento como referente técnico del equipo • Implementación de mejoras en procesos de troubleshooting.
+        </div>
+      </div>
+
+      <div class="job">
+        <h4>TELEFÓNICA S.A.</h4>
+        <span><strong>Soporte Técnico / Help Desk</strong> · Córdoba, Argentina · 2010 – 2016</span>
+        <ul>
+          <li>Atención técnica remota a clientes residenciales (más de 50 casos diarios).</li>
+          <li>Configuración de módems y routers (ADSL, cable, fibra).</li>
+          <li>Diagnóstico de fallas de conectividad, WiFi y red local.</li>
+          <li>Resolución de incidencias de software y hardware básico.</li>
+          <li>Gestión de tickets en CRM corporativo con cumplimiento de SLA.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h4>SANCOR LÁCTEOS</h4>
+        <span><strong>Preventista Telefónico / Soporte Operativo</strong> · Córdoba, Argentina · 2016 – 2017</span>
+        <ul>
+          <li>Gestión de ventas y soporte comercial.</li>
+          <li>Control de stock y reposición.</li>
+          <li>Seguimiento de indicadores operativos y reportes de gestión.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>EXPERIENCIA TÉCNICA FREELANCE</h3>
+      <p><strong>Soporte Técnico PC (Windows / Mac)</strong> · 2010 – Actualidad</p>
+      <ul>
+        <li>Instalación, formateo, optimización de sistemas operativos Windows y macOS</li>
+        <li>Soporte remoto y presencial a usuarios finales</li>
+        <li>Configuración de redes domésticas y pequeñas oficinas</li>
+        <li>Recuperación de datos y resolución de problemas de hardware</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>PORTFOLIO & PROYECTOS</h3>
+      <div class="portfolio-link">
+        <a href="https://casg.netlify.app" target="_blank">🌐 casg.netlify.app</a>
+        <p>Portfolio personal con proyectos de desarrollo web (HTML, CSS, Responsive Design)</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>FORMACIÓN ACADÉMICA</h3>
+      <ul>
+        <li><strong>Universidad Nacional de Córdoba</strong> – Arquitectura (4° año incompleto)</li>
+        <li><strong>Liceo Profesional Abdón Cifuentes (Chile)</strong> – Educación Secundaria Completa</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>CERTIFICACIONES Y CURSOS</h3>
+      <ul>
+        <li><strong>Cisco Networking Academy</strong> – Fundamentos de Redes (en curso)</li>
+        <li><strong>FreeCodeCamp</strong> – Responsive Web Design (300 hs)</li>
+        <li><strong>Google Activate</strong> – Introducción al Desarrollo Web</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>IDIOMAS</h3>
+      <div class="languages">
+        <div class="language">
+          <strong>Español</strong>
+          <span>Nativo</span>
+          <div class="level-bar">
+            <div class="level-fill" style="width: 100%"></div>
+          </div>
+        </div>
+        <div class="language">
+          <strong>Inglés</strong>
+          <span>Intermedio (B1)</span>
+          <div class="level-bar">
+            <div class="level-fill" style="width: 60%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>COMPETENCIAS INTERPERSONALES</h3>
+      <div class="soft-skills">
+        <div class="soft-skill">✓ Resolución de problemas bajo presión</div>
+        <div class="soft-skill">✓ Comunicación técnica clara y efectiva</div>
+        <div class="soft-skill">✓ Trabajo en equipo multicultural</div>
+        <div class="soft-skill">✓ Adaptabilidad a nuevas tecnologías</div>
+        <div class="soft-skill">✓ Orientación al cliente</div>
+        <div class="soft-skill">✓ Capacidad de mentoría y formación</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>HABILIDADES TÉCNICAS</h3>
+      <div class="skills">
+        <span class="skill">Soporte IT L1/L2</span>
+        <span class="skill">Help Desk Corporativo</span>
+        <span class="skill">Troubleshooting</span>
+        <span class="skill">ITIL</span>
+        <span class="skill">TCP/IP</span>
+        <span class="skill">DNS</span>
+        <span class="skill">DHCP</span>
+        <span class="skill">VLAN</span>
+        <span class="skill">MPLS</span>
+        <span class="skill">Redes Capa 2 y 3</span>
+        <span class="skill">Windows</span>
+        <span class="skill">macOS</span>
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">MS Office</span>
+        <span class="skill">Ticketing Systems</span>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

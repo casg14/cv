@@ -83,6 +83,34 @@
       border-bottom: 1px solid #000;
     }
     
+    /* BOTÓN DESCARGA PDF */
+    .download-section {
+      text-align: center;
+      margin: 20px 0;
+      padding: 15px;
+      background: #f8f8f8;
+      border-radius: 5px;
+      border-left: 4px solid #333;
+    }
+    .btn-download {
+      background: #2d2d2d;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11pt;
+      font-weight: 600;
+      transition: all 0.3s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .btn-download:hover {
+      background: #1a1a1a;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+    
     .keywords {
       background: #f8f8f8;
       border-left: 4px solid #333;
@@ -251,6 +279,9 @@
         padding: 30px;
         border: none;
       }
+      .download-section {
+        display: none;
+      }
     }
     
     @media (max-width: 768px) {
@@ -259,6 +290,9 @@
       }
       .photo {
         margin: 15px auto 0;
+      }
+      .soft-skills {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -281,10 +315,19 @@
       </div>
       
       <div class="photo">
-        <!-- REEMPLAZÁ ESTA LÍNEA con el enlace de tu foto -->
         <img src="cesar-silva-gajardo.png" alt="César Silva Gajardo">
       </div>
     </header>
+
+    <!-- BOTÓN DESCARGAR PDF -->
+    <div class="download-section">
+      <button onclick="window.print()" class="btn-download">
+        📥 Descargar CV en PDF
+      </button>
+      <p style="margin-top: 8px; font-size: 9pt; color: #666;">
+        Haz clic y selecciona "Guardar como PDF" en el cuadro de diálogo
+      </p>
+    </div>
 
     <div class="keywords">
       <h3>COMPETENCIAS CLAVE</h3>
